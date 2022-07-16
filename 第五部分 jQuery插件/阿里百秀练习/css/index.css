@@ -1,0 +1,23 @@
+.main,.right{
+    float: left;
+    position: relative;
+}
+
+.left{
+    float: left;
+    width: 100px;
+}
+
+
+.left img{
+
+    width: 100px;
+}
+
+.main img{
+    width: 100%;
+}
+
+.right img{
+    width: 200px;
+}

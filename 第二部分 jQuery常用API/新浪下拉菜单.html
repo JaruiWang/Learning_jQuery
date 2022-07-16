@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <script src="./jquery-3.6.0.js"></script>
+
+    <style>
+        .nav{
+            
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+        .nav>li{
+            float: left;
+            
+            font-size: 20px;
+            margin-left: 10px;
+            
+        }
+
+
+        .nav>li li{
+            border: 1px solid;
+            margin-top: 10px;
+        }
+
+        .nav ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(function(){
+            //鼠标经过
+            $('.nav>li').mouseover(function(){
+                // 显示元素是show()  隐藏元素hide()
+                $(this).children('ul').show();
+                console.log('123');
+            })
+
+            $('.nav>li').mouseout(function(){
+                $(this).children('ul').hide();
+                console.log('321');
+            })
+        })
+    </script>
+</body>
+</html>

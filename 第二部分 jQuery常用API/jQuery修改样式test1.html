@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    asasda
+    </div>
+    <script>
+        //获取属性值
+        console.log($('div').css('width'));
+
+        //设置属性值，必须使用引号，如果值是数字，可以不用使用单位和引号
+        // 属性名和属性值用逗号分隔
+        $('div').css('width',150);
+
+        //设置多组属性值，参数可以是对象的形式
+        // 属性名和属性值用冒号分隔
+        // 属性名可以不加引号
+        $('div').css({color:'white','font-size':30});
+        
+    </script>
+</body>
+</html>

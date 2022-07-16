@@ -1,0 +1,254 @@
+.cart-wrap{
+    width: 900px;
+    overflow: hidden;
+    margin: 100px auto;
+}
+
+.cart-thead{
+    width: 900px;
+    overflow: hidden;
+}
+
+.cart-thead div{
+    float: left;
+}
+.cart-thead  .t-checkbox{
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid;
+    background-color: antiquewhite;
+}
+
+.cart-thead  .t-goods{
+    width: 300px;
+    border: 1px solid;
+    background-color: antiquewhite;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.cart-thead .t-price{
+    width: 100px;
+    border: 1px solid;
+    background-color: antiquewhite;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.cart-thead .t-num{
+    width: 100px;
+    border: 1px solid;
+    background-color: antiquewhite;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.cart-thead .t-sum{
+    width: 100px;
+    border: 1px solid;
+    background-color: antiquewhite;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.cart-thead .t-action{
+    width: 100px;
+    border: 1px solid;
+    background-color: antiquewhite;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.cart-item-list{
+    width: 100%;
+    overflow: hidden;
+}
+
+.cart-item-list .cart-item{
+    width: 100%;
+    overflow: hidden;
+    height: 75px;
+
+}
+
+.cart-item-list .cart-item>div{
+    float: left;
+}
+
+.cart-item-list .cart-item .p-checkbox{
+    width: 100px;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    border: 1px solid;
+    /* background-color: antiquewhite; */
+
+    display: inline-block;
+}
+
+.cart-item-list .cart-item .p-goods {
+    width: 300px;
+    height: 100%;
+    
+    border: 1px solid;
+    /* background-color: antiquewhite; */
+}
+
+.cart-item-list .cart-item .p-goods div{
+    display: inline-block;
+}
+
+.cart-item-list .cart-item .p-goods .p-img{
+    width: 45px;
+    height: 100%;
+}
+
+.cart-item-list .cart-item .p-goods img{
+    height: 45px;
+    width: 45px;
+    padding-left: 10px;
+}
+
+.cart-item-list .cart-item .p-goods .p-msg{
+    width: 190px;
+    height: 45px;
+    padding-left: 20px;
+    font-size: 6px;
+    line-height: 20px;
+  
+}
+
+.cart-item-list .cart-item .p-goods div{
+    float: left;
+}
+
+.cart-item-list .cart-item .p-price{
+    width: 100px;
+    height: 100%;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid;
+    /* background-color: antiquewhite; */
+}
+.cart-item-list .cart-item .p-num{
+    width: 102px;
+    height: 100%;
+    border: 1px solid;
+    /* background-color: antiquewhite; */
+    padding-left: 12px;
+    padding-top: 12px;
+    box-sizing:border-box
+}
+.cart-item-list .cart-item .p-num a{
+    display: inline-block;
+    width: 15px;
+    height: 100%;
+    border: 1px solid;
+    line-height: 15px;
+    text-align: center;
+    float: left;
+    
+}
+
+.cart-item-list .cart-item .p-num input{
+    display: inline-block;
+    width: 35px;
+    margin: 0;
+    padding: 0;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border: 1px solid;
+    float: left;
+ 
+
+}
+
+
+
+.cart-item-list .cart-item .p-sum{
+    width: 100px;
+    height: 100%;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid;
+    /* background-color: antiquewhite; */
+}
+
+
+
+.cart-item-list .cart-item .p-action{
+    width: 100px;
+    height: 100%;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid;
+    /* background-color: antiquewhite; */
+}
+
+.cart-floatbar{
+    width: 810px;
+    overflow: hidden;
+    /* background-color: antiquewhite; */
+    border: 1px solid;
+}
+
+.cart-floatbar .select-all{
+    float: left;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.cart-floatbar .operation{
+    float: left;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.cart-floatbar .toolbar-right{
+    float: right;
+}
+
+.cart-floatbar .toolbar-right .btn-area{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    background-color: pink;
+    display: inline-block;
+}
+
+.cart-floatbar .toolbar-right .price-sum{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.cart-floatbar .toolbar-right .amount-sum{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+
+.check-cart-item{
+    background-color:lightcyan;
+}

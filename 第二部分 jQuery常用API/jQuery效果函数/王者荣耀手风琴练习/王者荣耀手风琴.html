@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        .king{
+            margin: 100px auto;
+            overflow: hidden;
+            border: 1px solid;
+            width: 700px;
+        }
+        .king li{
+            float: left;
+            width: 69px;
+            height: 69px;
+            overflow: hidden;
+            border: 1px solid;
+            position: relative;
+            margin: 10px;
+        }
+
+        .king li .small{
+            position:absolute;
+            top: 0px;
+            left: 0px;
+            width: 69px;
+            height: 69px;
+            border-radius: 5px;
+        }
+        .big{
+            display: none;
+        }
+        .king li.current{
+            width: 224px;
+        }
+        .king li.current .big{
+            display:block;
+        }
+        .king li.current .small{
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="king">
+        <ul>
+            <li class="current">
+                <a href="">
+                    <img src="./img/1_small.webp" alt="" class="small">
+                    <img src="./img/11_big.png" alt="" class="big">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img src="./img/2_small.webp" alt="" class="small">
+                    <img src="./img/22_big.png" alt="" class="big">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img src="./img/3_small.webp" alt="" class="small">
+                    <img src="./img/33_big.png" alt="" class="big">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img src="./img/4_small.webp" alt="" class="small">
+                    <img src="./img/44_big.png" alt="" class="big">
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <img src="./img/5_small.webp" alt="" class="small">
+                    <img src="./img/55_big.png" alt="" class="big">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $('.king li').mouseenter(function(){
+            $(this).stop().animate({
+                width:224
+            },200).find('.small').stop().fadeOut().siblings('.big').stop().fadeIn();
+
+            $(this).siblings('li').stop().animate({
+                width:69
+            },200).find('.small').stop().fadeIn().siblings('.big').stop().fadeOut();
+        });
+
+    </script>
+    
+</body>
+</html>

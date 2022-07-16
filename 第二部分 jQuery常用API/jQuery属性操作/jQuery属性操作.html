@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <a href="http://www.baidu.com" title="okk">aa</a>
+    <input type="checkbox" name="" id="" checked>
+
+    <!-- index是自定义属性 -->
+    <div index="1">我是div</div>
+
+    <span></span>
+
+    <script>
+        $(function(){
+            // element.prop('属性名') 获取属性值
+            console.log($('a').prop('href'));
+            console.log($('a').prop('title'));
+            // element.prop('属性名','属性值') 设置属性值
+            $('a').prop('title','we are ok');
+
+            $('input').change(function(){
+                console.log($(this).prop("checked"));        
+            })
+
+            // console.log($('div').prop('index')); 自定义属性不能使用prop
+
+            console.log($('div').attr('index'));
+            $('div').attr('index',789);
+
+            // 3. 数据缓存data() 这个里面的数据是存放在元素的内存里面的
+            $('span').data('uname','andy');
+            console.log( $('span').data('uname'));
+        })
+
+    </script>
+</body>
+</html>

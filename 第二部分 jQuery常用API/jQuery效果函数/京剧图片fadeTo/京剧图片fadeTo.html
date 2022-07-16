@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        .wrap img{
+            width: 100px;
+            height: 150px;
+        }
+        ul{
+            width: 366px;
+            /* height: 450px; */
+            overflow: hidden;
+        }
+
+        ul li{
+            float: left;
+            margin: 10px;
+            border: 1px solid;
+        }
+        .wrap{
+            width: 366px;
+            border: 1px solid;
+            overflow: hidden;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href=""><img src="./img/1.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="./img/2.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="./img/3.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="./img/4.png" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="./img/5.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="./img/6.png" alt=""></a>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        //鼠标进入的时候，其他的li标签透明度：0.5
+
+        $('.wrap>ul li').mouseover(function(){
+            $(this).siblings('li').stop().fadeTo("fast", 0.5);
+        })
+        // 鼠标离开，其他的li标签透明度改为1.
+        $('.wrap>ul li').mouseout(function(){
+            $(this).siblings('li').stop().fadeTo("fast", 1);
+        })
+    </script>
+    
+</body>
+</html>

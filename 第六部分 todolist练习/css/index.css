@@ -1,0 +1,86 @@
+header section{
+    height: 60px;
+    
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    
+}
+
+.sectionbody{
+    position: relative;
+}
+
+body{
+    background-color: #cbcecb;
+}
+
+header{
+    background-color: #2f322f
+}
+
+.Title{
+    float: left;
+}
+
+#title{
+    float: right;
+}
+
+#todolist p,#donelist p{
+    display: inline-block;
+}
+
+#todolist,#donelist{
+    background-color: #fcfffc;
+    padding: 5px;
+}
+
+#todolist li,#donelist li{
+    height: 30px;
+    margin: 5px;
+    /* background-color: #cbcecb; */
+    position: relative;
+}
+
+#todolist li a,#donelist li a{
+    /* background-image: url('./img/circle.png'); */
+    /* background:url("./123.png") no-repeat; */
+    width: 25px;
+    height: 25px;
+    /* float: right; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size:100% 100%;
+    z-index: 999;
+    background-color: #2f322f;
+    border-radius: 12.5px;
+}
+
+#donelist{
+    background-color:#e3e7e3 ;
+    opacity: 0.5;
+}
+
+.todolist_h2,.donelist_h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+.todolist-box,.donelist-box{
+    width: 600px;
+    margin: 0 auto;
+}
+
+footer{
+    width: 200px;
+    margin: 20px auto;
+    font-size: 10px;
+    color: #8a8c92;
+}
+
+#todocount,#donecount{
+    position: absolute;
+    right: 130px;
+}

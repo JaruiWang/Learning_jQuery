@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>原先的Li</li>
+    </ul>
+    <div class="test">
+        我是原先的div
+    </div>
+    <script>
+        $(function(){
+            //1.创建元素
+            var li=$('<li>我是后面创建的Li</li>');
+
+            //2.添加元素
+            //(1)内部添加
+            // 放到ul内容的最后面
+            // $('ul').append(li);
+            //放到ul内容的最前面
+             $('ul').prepend(li);
+
+             //(2)外部添加
+             var div=$('<div>我是后面创建的div</div>');
+            //  $('.test').after(div);
+             $('.test').before(div);
+
+             //删除元素
+             //ele.remove() 删除匹配的元素本身
+            //  li.remove();
+            // $('ul').remove();
+            // ele.empty() 清空匹配元素的所有子节点
+            // $('ul').empty();
+            // ele.html('') 清空匹配元素的所有子节点
+            $('ul').html('');
+
+        })
+    </script>
+</body>
+</html>

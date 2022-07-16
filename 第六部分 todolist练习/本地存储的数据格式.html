@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   var todolist=[{
+        title:'我今天吃八个馒头',
+        done:false
+    },{
+        title:'我今天学习jq',
+        done:false
+    }];
+    //  4. 本地存储localStorage里面只能存储字符串格式，
+    // 因此需要把对象转化为字符串JSON.stringfy(data) 
+  
+    localStorage.setItem('todo',JSON.stringify(todolist));
+    var data=localStorage.getItem('todo');
+
+    // 获取本地存储数据，需要把里面的字符串转换为对象格式 JSON.parse() 我们才能使用里面的数据。
+    data=JSON.parse(data);
+    // console.log(typeof data);
+    // console.log(data[0].done);
+    </script>
+</body>
+</html>

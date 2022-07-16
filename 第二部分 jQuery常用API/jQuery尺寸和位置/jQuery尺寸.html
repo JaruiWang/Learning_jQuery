@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px;
+            border: 15px solid red;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        $(function(){
+            //1. width()/height()  取得匹配元素的宽度和高度值，只算width/height
+            console.log($('div').width());
+            // width()和height()加入参数，就可以设置了
+            // $('div').width(300);
+
+            // 2. innerWidth()/innerHeight()  取得匹配元素的宽度和高度值，包含padding
+            console.log($('div').innerWidth());
+            console.log($('div').innerHeight());
+            //innerWidth()/innerHeight()加入参数, 也可以设置了
+            // $('div').innerWidth(500);
+
+            // 3. outerWidth()/outerHeight()  取得匹配元素的宽度和高度值，包含padding和border
+            console.log($('div').outerHeight());
+            // outerWidth()/outerHeight()加入参数, 也可以设置了
+            $('div').outerHeight(500);
+
+            // 4. outerWidth(true)/outerHeight(true)  取得匹配元素的宽度和高度值，包含padding和border和margin
+            console.log($('div').outerWidth(true));
+            console.log($('div').outerHeight(true));
+            
+        })
+    </script>
+    
+</body>
+</html>

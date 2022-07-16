@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        $(function(){
+            $('div').on({
+                click:function(){
+                    console.log('我点击了');
+                },
+                mouseover:function(){
+                    console.log('我鼠标经过了');
+                }
+            });
+
+            $('ul').on('click','li',function(){
+            alert(11);
+        })
+
+            // 1.事件解绑
+            // $('div').off(); //解绑了div身上的所有事件
+            // $('div').off('click');  //只是解绑div身上的click事件
+            $('ul').off('click','li');
+
+            // 2. one() 绑定只能触发一次的事件
+            $('p').one('click',function(){
+                alert(12);
+            })
+
+
+        })
+
+    </script>
+    <div></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p>我是ppp</p>
+</body>
+</html>

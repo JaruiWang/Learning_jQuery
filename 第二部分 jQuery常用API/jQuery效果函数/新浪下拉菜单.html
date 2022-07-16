@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <script src="../jquery-3.6.0.min.js"></script>
+
+    <style>
+        .nav{
+            
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+        .nav>li{
+            float: left;
+            
+            font-size: 20px;
+            margin-left: 10px;
+            
+        }
+
+
+        .nav>li li{
+            border: 1px solid;
+            margin-top: 10px;
+        }
+
+        .nav ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(function(){
+            //鼠标经过
+            // $('.nav>li').mouseover(function(){
+            //     // 显示元素是show()  隐藏元素hide()
+            //     $(this).children('ul').slideDown(900);
+            //     console.log(12);
+                
+            // })
+
+            // $('.nav>li').mouseout(function(){
+            //     $(this).children('ul').slideUp(200);
+                
+            // })
+
+            //hover([over,]out)第一个函数是鼠标经过的函数，第二个是离开
+            // $('.nav>li').hover(function(){
+            //     $(this).children('ul').slideDown(900);
+            // },function(){
+            //     $(this).children('ul').slideUp(200);
+            // })
+
+            // 如果只有一个函数，则鼠标经过和离开都会触发
+            $('.nav>li').hover(function(){
+                $(this).children('ul').stop().slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>

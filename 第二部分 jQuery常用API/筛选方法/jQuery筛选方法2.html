@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js">
+
+    </script>
+</head>
+<body>
+    <ol>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li class="item">我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+    </ol>
+    <ul>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+        <li>我是ol  的li</li>
+    </ul>
+    <script>
+        $(function(){
+            //1.兄弟元素
+            $(function(){
+                // $("ol .item").siblings('li').css('color','red');
+                // $("ol .item").nextAll().css('color','red');
+                $("ol .item").prevAll().css('color','red');
+
+                // 选择第n个元素
+                // （1）可以利用选择器的方式选择
+                $("ul li:eq(3)").css('color','red');
+
+                // (2) 我可以利用选择方法的方式选择，更推荐这种写法
+                var index=1;
+                $("ul li").eq(index).css('color','blue');
+            })
+        })
+    </script>
+</body>
+</html>

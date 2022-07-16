@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fullpage.min.css">
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./fullpage.min.js"></script>
+</head>
+<body>
+    <div id="fullpage">
+        <div class="section">Some section11</div>
+        <div class="section">Some section22</div>
+        <div class="section">Some section33</div>
+        <div class="section">Some section</div>
+    </div>
+
+    <script>
+//         var myFullpage = new fullpage('#fullpage', {
+//       verticalCentered: true,
+//       anchors: ['anchor1', 'anchor2', 'anchor3'],
+//       menu: '#menu',
+//       sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+//   });
+
+$(document).ready(function() {
+	$('#fullpage').fullpage({
+		//options here
+		autoScrolling:true,
+		scrollHorizontally: true,
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE']
+	});
+
+	//methods
+	$.fn.fullpage.setAllowScrolling(true);
+});
+	
+
+    </script>
+    
+</body>
+</html>

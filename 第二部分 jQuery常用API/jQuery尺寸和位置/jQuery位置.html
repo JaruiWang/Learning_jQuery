@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .father{
+            width: 300px;
+            height: 300px;
+            margin: 200px;
+            background-color: pink;
+            position: relative;
+        }
+
+        .son{
+            width: 100px;
+            height: 100px;
+            /* margin: 200px; */
+            background-color: lightblue;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son">
+        </div>
+    </div>
+    <script>
+        //offset()获取元素距离文档顶部和左边的距离，和父元素无关
+        console.log($('.son').offset());
+        console.log($('.son').offset().left);
+        console.log($('.son').offset().top);
+        // 可以设置元素的偏移
+        // $('.son').offset({
+        //     top:300,
+        //     left:300
+        // })   
+    
+        // position() 获取元素距离带有定位的父级位置的偏移，
+        console.log($('.son').position());
+        console.log($('.son').position().left);
+        console.log($('.son').position().top);
+        // position()只能获取位置信息，不能设置
+        //        $('.son').position({
+        //     top:20,
+        //     left:20
+        // })  
+    </script>
+</body>
+</html>

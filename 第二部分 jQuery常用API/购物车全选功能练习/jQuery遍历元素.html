@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        $(function(){
+            // 1.each() 方法遍历元素
+            var arr=['red','green','blue'];
+            var sum=0;
+            $('div').each(function(i,domEle123){
+                // 回调函数第一个参数一定是索引号，索引号名称可以自己取
+                console.log(i);
+
+                // 回调函数第二个参数一定是DOM对象，名称可以自己取
+                console.log(domEle123);
+                $(domEle123).css('color',arr[i]);
+
+                sum+=parseInt($(domEle123).text());
+            
+            })
+            console.log(sum);
+
+
+            // 2. $.each() 方法遍历元素 主要用于遍历数据，处理数据
+            $.each($('div'),function(i,domEle123){
+                console.log('$.each',i);
+            })
+            //可以遍历数组
+            $.each(arr,function(i,domEle){
+                console.log(i);
+                console.log(domEle);
+            })
+            //可以遍历对象
+            $.each({name:'wang',age:23},function(i,domEle){
+                console.log(i);
+                console.log(domEle);
+            })
+    
+
+        })
+    </script>
+</body>
+</html>
